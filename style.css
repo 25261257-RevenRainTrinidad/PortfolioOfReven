@@ -1,0 +1,120 @@
+:root{--h:72px;--bg:#fff;--alt:#fff0f0;--text:#1a1a1a;--acc:#d90429;--on:#fff}
+[data-theme="dark"]{--bg:#000;--alt:#141414;--text:#fff;--acc:#fff;--on:#000}
+
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .3s,color .3s}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+li::before{content:"\25A0";color:var(--acc);margin-right:.6rem;font-size:.7em;vertical-align:middle}
+[data-theme="dark"] .logo img{filter:invert(1)}
+
+/* ---------- Buttons ---------- */
+.btn{font:inherit;font-weight:800;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;
+  padding:.9rem 1.8rem;color:var(--acc);border:3px solid var(--acc);box-shadow:5px 5px 0 var(--acc);
+  background:linear-gradient(var(--acc),var(--acc)) no-repeat left center/0% 100%,var(--bg);
+  transition:background-size .3s,color .3s,transform .15s,box-shadow .15s}
+.btn:hover,.btn:focus-visible{background-size:100% 100%;color:var(--on);transform:translate(3px,3px);box-shadow:2px 2px 0 var(--acc);outline:none}
+.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--acc)}
+.btn.small{padding:.5rem 1rem;font-size:.85rem;box-shadow:4px 4px 0 var(--acc)}
+
+/* ---------- Header ---------- */
+#header{position:fixed;top:0;left:0;right:0;height:var(--h);z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;background:var(--bg);border-bottom:3px solid var(--acc);box-shadow:0 5px 0 var(--acc);transition:background .3s}
+.logo img{height:44px;width:auto;transition:transform .25s}
+.logo:hover img{transform:scale(1.06)}
+#nav{display:flex;gap:2.2rem}
+#nav a{font-weight:800;text-transform:uppercase;letter-spacing:.1em;position:relative;padding:.3rem 0;transition:color .2s}
+#nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+#nav a:hover{color:var(--acc)}
+#nav a:hover::after{transform:scaleX(1)}
+.settings{position:relative}
+.panel{position:absolute;right:0;top:calc(100% + 18px);width:210px;display:flex;flex-direction:column;gap:.8rem;padding:1.2rem;
+  background:var(--bg);border:3px solid var(--acc);box-shadow:8px 8px 0 var(--acc);opacity:0;visibility:hidden;transform:translateY(-10px);transition:.25s}
+.panel.open{opacity:1;visibility:visible;transform:none}
+.panel p{font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--acc)}
+.theme-opt.active{background-size:100% 100%;color:var(--on)}
+
+/* ---------- About / Home ---------- */
+#about{min-height:100vh;padding:calc(var(--h) + 2rem) 6vw 2rem;display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.hello{color:var(--acc);font-weight:800;letter-spacing:.25em;text-transform:uppercase}
+#about h1{font-size:clamp(2.3rem,5vw,4.8rem);line-height:1.05;text-transform:uppercase;margin:.6rem 0 1.5rem}
+#about h1 span{color:var(--acc)}
+#about p{font-size:clamp(1rem,1.4vw,1.3rem);max-width:36rem;margin-bottom:2rem}
+.photo{justify-self:center;height:calc(100vh - var(--h) - 7rem);max-width:100%;aspect-ratio:1/1;object-fit:cover;
+  border:3px solid var(--acc);box-shadow:14px 14px 0 var(--acc)}
+
+/* ---------- Sections ---------- */
+.section{background:var(--alt);padding:5rem 6vw}
+#projects{padding-top:5rem}
+.inner{max-width:1200px;margin:0 auto}
+.title{font-size:clamp(2rem,4vw,3.4rem);text-transform:uppercase;color:var(--acc);margin-bottom:2rem;display:inline-block;border-bottom:8px solid var(--acc)}
+#projects .inner{padding:0 6vw 2rem;max-width:none}
+.group{font-size:1.4rem;text-transform:uppercase;margin:2.5rem 0 1.5rem;padding-left:1rem;border-left:10px solid var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.5rem;padding-right:10px}
+
+/* ---------- Skill cards ---------- */
+.card{background:var(--bg);border:3px solid var(--acc);box-shadow:10px 10px 0 var(--acc);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translate(-5px,-5px);box-shadow:15px 15px 0 var(--acc)}
+.card-top{position:relative;height:220px;overflow:hidden;border-bottom:3px solid var(--acc)}
+.card-top img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card-top img.contain{object-fit:contain}
+.card:hover .card-top img{transform:scale(1.07)}
+.card-top h4{position:absolute;left:0;right:0;bottom:0;padding:.6rem 1rem;background:var(--acc);color:var(--on);text-transform:uppercase;letter-spacing:.08em}
+.card-body{padding:1.2rem 1.2rem 1.4rem}
+div.card-body ul{margin-bottom:1rem}
+.badge{max-height:170px;width:auto;margin:0 auto;border:3px solid var(--acc)}
+
+/* ---------- Projects ---------- */
+.project{min-height:50vh;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:3rem 6vw}
+.project.alt{background:var(--alt)}
+.project>img{justify-self:center;width:auto;max-height:calc(50vh - 6rem);border:3px solid var(--acc);box-shadow:10px 10px 0 var(--acc)}
+.project h3{font-size:clamp(1.6rem,3vw,2.6rem);text-transform:uppercase;color:var(--acc);line-height:1.15;margin-bottom:1rem}
+.project h4{text-transform:uppercase;letter-spacing:.1em;margin-bottom:.4rem}
+.project li{font-size:1.15rem}
+
+/* ---------- Footer ---------- */
+#contact{background:var(--acc);color:var(--on);text-align:center;padding:3rem 2rem 2rem}
+#contact h2{text-transform:uppercase;letter-spacing:.1em;margin-bottom:.6rem}
+.mail{font-weight:800;border-bottom:3px solid var(--on);transition:letter-spacing .25s}
+.mail:hover{letter-spacing:.06em}
+.socials{display:flex;justify-content:center;gap:1.5rem;margin:1.5rem 0}
+.social{width:56px;height:56px;display:grid;place-items:center;border:3px solid var(--on);box-shadow:5px 5px 0 var(--on);transition:.15s}
+.social:hover{background:var(--on);color:var(--acc);transform:translate(3px,3px);box-shadow:2px 2px 0 var(--on)}
+
+/* ---------- Pop-ups ---------- */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:1rem;background:rgba(0,0,0,.75);opacity:0;visibility:hidden;transition:.3s}
+.modal.open{opacity:1;visibility:visible}
+.dialog{max-width:480px;max-height:92vh;overflow:auto;padding:2rem;text-align:center;background:var(--bg);color:var(--text);
+  border:3px solid var(--acc);box-shadow:12px 12px 0 var(--acc);transform:scale(.85);transition:transform .3s}
+.modal.open .dialog{transform:scale(1)}
+.dialog h2{color:var(--acc);text-transform:uppercase;margin-bottom:.8rem}
+.dialog p{margin-bottom:1.5rem}
+.dialog.wide{max-width:680px;padding:1rem}
+.dialog.wide img{width:100%;border:2px solid var(--acc)}
+.actions{display:flex;gap:1rem;justify-content:center;margin-top:1rem}
+
+/* ---------- Scroll animation (only if JS is running) ---------- */
+.js .reveal{opacity:0;transform:translateY(40px);transition:opacity .7s,transform .7s}
+.js .reveal.in{opacity:1;transform:none}
+.js .card.reveal.in{transition:opacity .7s,transform .2s,box-shadow .2s}
+
+/* ---------- Phone and tablet (the one media query) ---------- */
+@media (max-width:900px){
+  :root{--h:104px}
+  #header{flex-wrap:wrap;align-content:center;padding:0 1rem;row-gap:.5rem}
+  .logo img{height:34px}
+  #nav{order:3;width:100%;justify-content:space-between;gap:0;font-size:.85rem}
+  .panel{top:calc(100% + 12px)}
+  #about{min-height:100vh;min-height:100svh;grid-template-columns:1fr;gap:1.4rem;padding:calc(var(--h) + 1.2rem) 1.2rem 1.5rem;text-align:center;align-content:center}
+  #about p{margin:0 auto 1.4rem;font-size:1rem}
+  #about h1{margin:.3rem 0 .8rem}
+  .photo{order:-1;height:26vh;width:26vh;box-shadow:8px 8px 0 var(--acc)}
+  .section{padding:3rem 1.2rem}
+  .grid{gap:2rem}
+  .project{min-height:0;grid-template-columns:1fr;gap:1.8rem;padding:2.5rem 1.2rem}
+  .project.rev>img{order:-1}
+  .project>img{width:100%;max-height:none}
+  #projects .inner{padding:0 1.2rem}
+}

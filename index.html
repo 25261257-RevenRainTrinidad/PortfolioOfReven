@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reven Rain Trinidad | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+</head>
+<body>
+
+<header id="header">
+  <a href="#" class="logo" id="logo" aria-label="Back to top"><img src="logo.png" alt="Reven Rain Trinidad logo"></a>
+  <nav id="nav">
+    <a href="#about" data-target="about">About</a>
+    <a href="#skills" data-target="skills">Skills</a>
+    <a href="#projects" data-target="projects">Projects</a>
+    <a href="#contact" data-target="contact">Contact</a>
+  </nav>
+  <div class="settings">
+    <button class="btn small" id="settingsBtn" aria-expanded="false" aria-controls="settingsPanel">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M3 5h18v2H3zM3 11h18v2H3zM3 17h18v2H3z"/><rect x="14" y="2" width="4" height="8"/><rect x="6" y="8" width="4" height="8"/><rect x="14" y="14" width="4" height="8"/></svg>
+      Settings
+    </button>
+    <div class="panel" id="settingsPanel">
+      <p>Appearance</p>
+      <button class="btn small theme-opt" data-theme-set="light">Light Mode</button>
+      <button class="btn small theme-opt" data-theme-set="dark">Dark Mode</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HOME / ABOUT -->
+  <section id="about">
+    <div class="about-text reveal">
+      <span class="hello">Hello, welcome!</span>
+      <h1>I'm Reven Rain <span>Trinidad</span></h1>
+      <p>I'm a Bachelor of Science in Information Technology student from Mabalacat City, Philippines. I build PCs, edit videos, and try to do best, and love gaming. Always learning, always leveling up.</p>
+      <button class="btn" id="resumeBtn">View My Resume</button>
+    </div>
+    <img class="photo reveal" src="aboutphoto.jpg" alt="Photo of Reven Rain Trinidad in front of the Eiffel Tower">
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="inner">
+      <h2 class="title">Skills</h2>
+
+      <h3 class="group">Real World Skills</h3>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="card-top"><img src="personal_computer_built.jpg" alt="A PC I built"><h4>PC Building</h4></div>
+          <ul class="card-body">
+            <li>Building a PC</li>
+            <li>Operating system installation</li>
+            <li>Diagnostic</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-top"><img src="editing.jpg" alt="Video editing timeline on my monitor"><h4>Editing</h4></div>
+          <ul class="card-body">
+            <li>Short Form Content</li>
+            <li>Long Form Content</li>
+            <li>Motion Design (Uses ease in and ease out at everything)</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-top"><img src="PromtEngeneer.png" alt="AI prompt box reading: I do this but better"><h4>Prompt Engineer</h4></div>
+          <ul class="card-body">
+            <li>Writing clear prompts to get better results from AI tools</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="group">Gaming Skills and Achievements</h3>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="card-top"><img class="contain" style="background:#ff4655" src="valorant_logo.jpg" alt="Valorant logo"><h4>Valorant</h4></div>
+          <div class="card-body">
+            <ul><li>Hard Stuck Gold</li></ul>
+            <img class="badge" src="valorant_gold_rank.png" alt="Valorant Gold competitive rank">
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-top"><img class="contain" style="background:#000" src="call_of_duty_mobile_logo.png" alt="Call of Duty Mobile logo"><h4>Call of Duty Mobile</h4></div>
+          <div class="card-body">
+            <ul><li>5 Consecutive Legendary Rank (2020-2022)</li></ul>
+            <img class="badge" src="CodmLegendaryRank.png" alt="Call of Duty Mobile Legendary rank badge">
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-top"><img class="contain" style="background:#fff" src="minecraftlogo.jpg" alt="Minecraft grass block"><h4>Minecraft</h4></div>
+          <div class="card-body">
+            <ul><li>Builder</li></ul>
+            <img class="badge" src="MinecraftBuilding.png" alt="A windmill I built in Minecraft">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="inner"><h2 class="title">Projects</h2></div>
+
+    <article class="project">
+      <img class="reveal" src="personal_computer_built.jpg" alt="The personal computer I built">
+      <div class="reveal">
+        <h3>Built a Personal Computer</h3>
+        <h4>Specs</h4>
+        <ul>
+          <li>Ryzen 5 3600</li>
+          <li>GTX 1660 Super</li>
+          <li>16GB 2666MHz RAM</li>
+          <li>512GB Gen3 NVMe SSD</li>
+          <li>550W MSI PSU</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project alt rev">
+      <div class="reveal">
+        <h3>YouTube Channel</h3>
+        <ul>
+          <li>6K Subscribers</li>
+          <li>Hasn't Monetized Yet</li>
+        </ul>
+      </div>
+      <img class="reveal" src="YoutubeChanell.png" alt="Screenshot of my YouTube channel">
+    </article>
+  </section>
+</main>
+
+<!-- CONTACT -->
+<footer id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a class="mail" href="mailto:revenraintrinidad@gmail.com">revenraintrinidad@gmail.com</a></p>
+  <div class="socials">
+    <!-- Put your Facebook link in the href below -->
+    <a class="social" href="https://www.facebook.com/sayhi2reven" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.5h2.8l.5-3.5h-3.3V7.9c0-1 .3-1.7 1.8-1.7H17V3.1C16.7 3.1 15.7 3 14.6 3 12.2 3 10.5 4.5 10.5 7.2V10H7.7v3.5h2.8V22z"/></svg>
+    </a>
+    <!-- Put your YouTube link in the href below -->
+    <a class="social" href="https://www.youtube.com/@reelity4388" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15l5.2-3L10 9z"/></svg>
+    </a>
+  </div>
+  <small>&copy; 2026 Reven Rain Trinidad</small>
+</footer>
+
+<!-- WELCOME POP-UP -->
+<div class="modal" id="welcomeModal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+    <h2 id="welcomeTitle">Welcome!</h2>
+    <p>Thanks for stopping by my portfolio. Take a look around, check out my skills and projects, and feel free to say hi.</p>
+    <button class="btn" data-close>Enter Site</button>
+  </div>
+</div>
+
+<!-- RESUME POP-UP -->
+<div class="modal" id="resumeModal" aria-hidden="true">
+  <div class="dialog wide" role="dialog" aria-modal="true" aria-label="Resume">
+    <img src="resume.png" alt="Resume of Reven Rain Trinidad">
+    <div class="actions">
+      <a class="btn small" href="resume.png" download>Download</a>
+      <button class="btn small" data-close>Close</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
